@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Higher or Lower</title><link rel="stylesheet" href="style.css"></head><body><header><strong>🎮 Game Hub</strong><nav><a href="index.html">Home</a><a href="game.html">Game</a><a href="board.html">Board</a><a href="ticket.html">Tickets</a></nav></header>
+<main>
+<h1>Higher or Lower: Game Prices</h1>
+<p>Is the price of the next game higher or lower? Equal price counts as a right guess.</p>
+<div class="stats box"><span>Lives: <b id="lives"></b></span><span>Streak: <b id="streak"></b></span><span>Best: <b id="best"></b></span></div>
+<div class="duel">
+<div class="box"><p class="muted">Current game</p><h2 id="cur-name"></h2><p class="big" id="cur-price"></p></div>
+<div class="box"><p class="muted">Next game</p><h2 id="next-name"></h2><p class="big">$?</p></div>
+</div>
+<div class="actions"><button data-choice="higher">Higher ▲</button><button data-choice="lower">Lower ▼</button><button id="restart">Restart</button></div>
+<p id="msg" class="msg" role="status"></p>
+</main><script src="game.js" defer></script></body></html>

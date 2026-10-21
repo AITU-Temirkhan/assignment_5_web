@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Project Board</title><link rel="stylesheet" href="style.css"></head><body><header><strong>🎮 Game Hub</strong><nav><a href="index.html">Home</a><a href="game.html">Game</a><a href="board.html">Board</a><a href="ticket.html">Tickets</a></nav></header>
+<main>
+<h1>Project Board</h1>
+<p class="muted">Max 3 cards can be in progress at the same time.</p>
+<div class="toolbar">
+<input id="search" type="search" placeholder="Search cards..." aria-label="Search cards">
+<select id="tag" aria-label="Filter by tag"></select>
+<button id="sort">Sort by priority</button>
+</div>
+<label>Progress: <span id="pct"></span><progress id="bar" value="0" max="1"></progress></label>
+<p id="msg" class="msg" role="status"></p>
+<p id="nothing" class="msg error hidden">Nothing found. Try another word or tag.</p>
+<div id="board"></div>
+</main><script src="board.js" defer></script></body></html>

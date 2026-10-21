@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ticket Builder</title><link rel="stylesheet" href="style.css"></head><body><header><strong>🎮 Game Hub</strong><nav><a href="index.html">Home</a><a href="game.html">Game</a><a href="board.html">Board</a><a href="ticket.html">Tickets</a></nav></header>
+<main>
+<h1>Ticket Builder</h1>
+<p id="summary" class="err" role="alert" tabindex="-1"></p>
+<div class="two">
+<form id="form" class="box">
+<label for="event">Event</label><select id="event" name="event" required aria-describedby="err-event"></select><p class="err" id="err-event"></p>
+<label for="date">Date</label><input id="date" name="date" type="date" required aria-describedby="err-date"><p class="err" id="err-date"></p>
+<label for="type">Ticket type</label><select id="type" name="type" required aria-describedby="err-type"></select><p class="err" id="err-type"></p>
+<label for="qty">Quantity (1-10)</label><input id="qty" name="qty" type="number" min="1" max="10" required aria-describedby="err-qty"><p class="err" id="err-qty"></p>
+<label for="person">Full name</label><input id="person" name="person" type="text" minlength="3" required autocomplete="name" aria-describedby="err-person"><p class="err" id="err-person"></p>
+<label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" aria-describedby="err-email"><p class="err" id="err-email"></p>
+<label for="promo">Promo code (optional)</label><input id="promo" name="promo" type="text" maxlength="12" aria-describedby="err-promo"><p class="err" id="err-promo"></p>
+<button type="submit">Buy ticket</button>
+</form>
+<aside class="box ticket" aria-label="Ticket preview">
+<h2>Ticket preview</h2>
+<p><b>Event:</b> <span id="p-event"></span></p>
+<p><b>Date:</b> <span id="p-date"></span></p>
+<p><b>Type:</b> <span id="p-type"></span></p>
+<p><b>Quantity:</b> <span id="p-qty"></span></p>
+<p><b>Name:</b> <span id="p-person"></span></p>
+<p><b>Email:</b> <span id="p-email"></span></p>
+<p class="big" id="p-total"></p>
+</aside>
+</div>
+<div id="result" class="box hidden" role="status"></div>
+</main><script src="ticket.js" defer></script></body></html>
